@@ -4,14 +4,14 @@ CXXFLAGS     += -O2 -DLINUX -DSDL_USE_OPENGL $(shell sdl-config --cflags)
 CXXWARNINGS  := -Wno-c++11-compat-deprecated-writable-strings -Wno-format-extra-args \
 				-Wno-invalid-source-encoding -Wno-logical-op-parentheses \
 				-Wno-write-strings
-LDLIBS       := -lGL -lSDL -lSDL_mixer -lSDL_image
+LDLIBS       := -framework OpenGL -framework Cocoa -lSDL -lSDL_mixer -lSDL_image
 PROGRAM_NAME := heboris
 
 all: make_directories $(PROGRAM_NAME)
 
 $(PROGRAM_NAME):
 	$(CXX) $(INCLUDE_PATH) $(CXXFLAGS) $(CXXWARNINGS) \
-	src/game/*.cpp src/main_sdl/*.cpp $(LDLIBS) -o $(PROGRAM_NAME)
+	src/game/*.cpp src/main_sdl/*.cpp SDLmain.m $(LDLIBS) -o $(PROGRAM_NAME)
 
 make_directories:
 	@mkdir -p "replay" "config/data"

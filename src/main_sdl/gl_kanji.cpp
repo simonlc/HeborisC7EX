@@ -2,8 +2,8 @@
 #	include <windows.h>
 #endif
 
-#include <GL/gl.h>
-#include <GL/glu.h>
+#include <OpenGL/gl.h>
+#include <OpenGL/glu.h>
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>

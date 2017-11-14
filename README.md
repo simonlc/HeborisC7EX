@@ -4,14 +4,14 @@ This version contains the source code for Heboris C7EX. It requires SDL-1.2,
 SDLmixer and SDLimage libraries to play. Additionally, it may be compiled
 with openGL support if that is present.
 
-Example dependencies on Ubuntu 17.04
+Deps for macOS
 
-    apt-get install libsdl1.2-dev libsdl-mixer1.2-dev libsdl-image1.2-dev mesa-common-dev
+    apt-get install sdl sld_mixer sdl_image
 
 #### Installation
 
 ```
-git pull https://github.com/tiehuis/HeborisC7EX
+git pull https://github.com/simonlc/HeborisC7EX
 make
 ./heboris
 ```
