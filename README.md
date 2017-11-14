@@ -6,7 +6,7 @@ with openGL support if that is present.
 
 Deps for macOS
 
-    apt-get install sdl sld_mixer sdl_image
+    brew install sdl sld_mixer sdl_image
 
 #### Installation
 
